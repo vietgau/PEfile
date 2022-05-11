@@ -1,0 +1,11 @@
+void Error(const char* ErrorMessage, BOOL printErrorCode, BOOL isReturn, int exitCode);
+VOID printDosHeader(IMAGE_DOS_HEADER* dosHeader);
+VOID printNTHeader(IMAGE_DOS_HEADER* dosHeader);
+VOID printNTSignature(IMAGE_DOS_HEADER* dosHeader);
+VOID printFileHeader(IMAGE_DOS_HEADER* dosHeader);
+VOID printOptionHeader(IMAGE_DOS_HEADER* dosHeader);
+VOID printDataDirectory(IMAGE_DOS_HEADER* dosHeader);
+VOID printSectionHeader(IMAGE_DOS_HEADER* dosHeader);
+VOID printExportDir(IMAGE_DOS_HEADER* dosHeader, BOOL isPrint);
+VOID PrintInportDir(IMAGE_DOS_HEADER* dosHeader, BOOL isPrint);
+DWORD RVAToOffset(IMAGE_DOS_HEADER* dosHeader, DWORD dwRVA);
